@@ -1,5 +1,6 @@
 Search in ‘esx_policejob/client/main.lua’ for
 
+``lua
 elseif action == 'handcuff' then
 
 TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(closestPlayer))
@@ -17,4 +18,4 @@ Citizen.Wait(3100)
 
 TriggerServerEvent('esx_policejob:handcuff',
 
-GetPlayerServerId(closestPlayer))
+GetPlayerServerId(closestPlayer))``
