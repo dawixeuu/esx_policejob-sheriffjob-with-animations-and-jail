@@ -55,7 +55,7 @@ start esx_policejob
    * If you want license management you have to set `Config.EnableLicenses` to `true` in `config.lua`
    * If you want service management you have to set `Config.MaxInService` to a higher value than `-1` in `config.lua`
 Search in ‘esx_policejob/client/main.lua’ for
-`
+```
 elseif action == 'handcuff' then
 TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(closestPlayer))
 Replace it with:
@@ -66,4 +66,4 @@ GetPlayerServerId(closestPlayer))
 Citizen.Wait(3100)
 TriggerServerEvent('esx_policejob:handcuff',
 GetPlayerServerId(closestPlayer))
-`
+```
