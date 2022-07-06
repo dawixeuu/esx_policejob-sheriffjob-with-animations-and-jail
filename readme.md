@@ -18,4 +18,5 @@ Citizen.Wait(3100)
 
 TriggerServerEvent('esx_policejob:handcuff',
 
-GetPlayerServerId(closestPlayer))``
+GetPlayerServerId(closestPlayer))
+``
