@@ -54,16 +54,16 @@ start esx_policejob
    * If you want armory management you have to set `Config.EnableArmoryManagement` to `true` in `config.lua`
    * If you want license management you have to set `Config.EnableLicenses` to `true` in `config.lua`
    * If you want service management you have to set `Config.MaxInService` to a higher value than `-1` in `config.lua`
+Search in ‘esx_policejob/client/main.lua’ for
+`
+elseif action == 'handcuff' then
+TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(closestPlayer))
+Replace it with:
 
-# Legal
-### License
-esx_policejob - police script for ESX
-
-Copyright (C) 2015-2022 Jérémie N'gadi
-
-This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
-
-This program Is distributed In the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty Of MERCHANTABILITY Or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License For more details.
-
-You should have received a copy Of the GNU General Public License along with this program. If Not, see http://www.gnu.org/licenses/.
-
+elseif action == 'handcuff' then
+TriggerServerEvent('esx_cuffanimation:startArrest',
+GetPlayerServerId(closestPlayer))
+Citizen.Wait(3100)
+TriggerServerEvent('esx_policejob:handcuff',
+GetPlayerServerId(closestPlayer))
+`
