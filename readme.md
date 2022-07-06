@@ -61,6 +61,7 @@ start esx_policejob
 ```
 elseif action == 'handcuff' then
 TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(closestPlayer))
+
 Replace it with:
 
 elseif action == 'handcuff' then
